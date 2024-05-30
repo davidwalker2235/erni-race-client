@@ -1,20 +1,28 @@
 import React from "react";
-import './Layer.css'
+import './Layer.css';
 
-const Layer = ({image, position, isAnimate, velocity}: { image: any, position: number, isAnimate: boolean, velocity: number }) => {
+interface LayerProps {
+  image: string;
+  styles?: any;
+  isAnimate: boolean;
+  velocity: number;
+}
 
+const Layer: React.FC<LayerProps> = ({ image, styles, isAnimate, velocity }) => {
   return (
     <div className="parallax-container">
-      <img
+      <div
+        className={`image-container ${isAnimate ? 'animate' : ''}`}
         style={{
-          transform: `translateY(${position}%) ${isAnimate ? 'translateX(-100vw)' : 'translateY(0vh)' }`,
-          transition: `transform ${velocity}s linear`
-      }}
-        className={`image ${isAnimate ? 'animate' : ''}`}
-        src={image}
-        alt={image.toString()}/>
+          ...styles,
+          animationDuration: `${velocity}s`,
+        }}
+      >
+        <img className="image" src={image} alt="Layer Image1" />
+        <img className="image" src={image} alt="Layer Image2" />
+      </div>
     </div>
   );
-}
+};
 
 export default Layer;

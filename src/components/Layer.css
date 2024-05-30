@@ -2,17 +2,34 @@
     position: absolute;
     top: 50%;
     left: 0;
+    width: 100vw;
+    height: 100%;
+    overflow: hidden;
     margin: auto;
     z-index: 1;
 }
-.image {
+
+.image-container {
+    display: flex;
     position: fixed;
-    top: 50%;
+    top: -50%;
     left: 0;
-    transform: translateY(-20%);
-    transition: transform 4s linear;
+    width: 200%; /* El contenedor debe tener el doble del ancho de la ventana */
 }
 
-.image.animate {
-    transform: translateX(-100vw);
+.image {
+    /*width: 50%; !* Cada imagen ocupa la mitad del contenedor *!*/
+}
+
+.image-container.animate {
+    animation: scroll infinite linear;
+}
+
+@keyframes scroll {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-50%);
+    }
 }
