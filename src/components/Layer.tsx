@@ -18,8 +18,8 @@ const Layer: React.FC<LayerProps> = ({ image, styles, isAnimate, velocity }) => 
           animationDuration: `${velocity}s`,
         }}
       >
-        <img className="image" src={image} alt="Layer Image1" />
-        <img className="image" src={image} alt="Layer Image2" />
+        <img src={image} alt="Layer Image1" />
+        <img src={image} alt="Layer Image2" />
       </div>
     </div>
   );

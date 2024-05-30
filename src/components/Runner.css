@@ -1,0 +1,19 @@
+.runner {
+    z-index: 5;
+    left: -350px;
+    top: 180px;
+}
+.runner.animate {
+    animation: runnerScroll infinite linear;
+    animation-duration: 2s;
+    animation-iteration-count: 1
+}
+
+@keyframes runnerScroll {
+    from {
+        transform: translateX(-300px);
+    }
+    to {
+        transform: translateX(0px);
+    }
+}

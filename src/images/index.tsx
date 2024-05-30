@@ -5,6 +5,7 @@ import moon from './moon.png';
 import pista from './pistaLarga.png';
 import rays from './rays.png';
 import sky from './sky.png';
+import sprite from './sprite.png';
 
 export {
   closeBuild,
@@ -13,5 +14,6 @@ export {
   moon,
   pista,
   rays,
-  sky
+  sky,
+  sprite
 }
