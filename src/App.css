@@ -1,0 +1,14 @@
+.cover-background {
+  background: rgb(2,0,36);
+  background: linear-gradient(0deg, rgba(2,0,36,1) 0%, rgba(9,9,121,0.8071603641456583) 55%, rgba(0,65,255,1) 100%);
+  overflow: hidden;
+  max-height: 98vh;
+}
+
+.logo {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: auto;
+}
